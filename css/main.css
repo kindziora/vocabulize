@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#user-top-bar a i.mdi-navigation-arrow-drop-down{
+    line-height: inherit;
+}
+  
+
+main{
+    background-image:url('../img/lightpaperfibers_@2X.png');
+}
+
+
+.play .light-blue.lighten-1 {
+  height: 45px;
+  line-height: 45px;
+  transition: all 2s;
+
+}
+
+.play footer.page-footer .footer-copyright {
+  height: 32px;
+  line-height: 32px;
+  transition: all 2s;
+}
+
+.play #circle image{
+    height: 35px;
+    transition: height 2s;
+}
+
+.greeting{
+    -webkit-filter: blur(0px);
+    transition: -webkit-filter 2s;
+}
+
+.play .greeting{
+    -webkit-filter: blur(150px);
+}
+
+.new{
+    z-index:10;
+}
+
+ 
+.flip {
+  -webkit-perspective: 800; 
+   height: 50px;
+   position: relative;
+   margin: 5px; 
+}
+
+.flip .cardx.flipped {
+  -webkit-transform: rotatex(-180deg);
+}
+
+.flip .cardx { 
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 1s;
+  overflow:visible;
+}
+
+.flip .cardx .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    z-index: 2;
+}
+
+.flip .cardx .front {
+    font-size: 2em;
+    text-align: center; 
+    position: absolute;
+    z-index: 1;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.flip .cardx .back {
+    -webkit-transform: rotatex(-180deg);
+    background: white;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+}
+ 
+@media only screen and (min-width : 601px) {
+   .play nav, .play nav .nav-wrapper i, .play nav a.button-collapse, .play nav a.button-collapse i {
+      line-height: 46px;
+    }
+}
+
+/* spin */
+
+      #stage { 
+          width: 100%;
+          height: 400px;
+          -webkit-perspective: 800;
+          -webkit-transform-style: preserve-3d;
+      }
+ 
+      .ring {
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+      }
+
+      .poster {
+        position: absolute;
+        width: 198px;
+        height: 50px; 
+      }
+      
+    
+      #ring-1 {
+        margin-top:200px;
+        -webkit-animation-name: x-spin;
+        -webkit-animation-duration: 20s;
+     }
+ 
+      @-webkit-keyframes x-spin {
+        0%    { -webkit-transform: rotateX(0deg); }
+        50%   { -webkit-transform: rotateX(180deg); }
+        100%  { -webkit-transform: rotateX(360deg); }
+      }
+      
+      #rotate {
+        margin: 50px;
+        height: 400px; 
+        -webkit-transform-style: preserve-3d; 
+      }
+      .over{
+          cursor:move;
+          position:absolute;
+          top:0;
+          bottom:0;
+          right:0;
+          left:0;
+          z-index:2;
+      }
+      
+      .infoLayer{
+          position: fixed;
+          background-color: rgba(202, 214, 196, 0.8);
+          z-index: 100;
+          right: 0;
+      }
+     

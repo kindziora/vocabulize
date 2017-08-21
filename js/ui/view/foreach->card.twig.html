@@ -1,0 +1,20 @@
+<div class="flip" data-name="card[{{index}}]" data-on="dblclick->card">
+
+  <div class="cardx">
+      <div class="face front">
+          <div class="over"></div>
+          <div class="col s1" data-name="card[{{index}}].counter">{{item.counter}}</div> 
+          <div class="col s10">{{item.original}}</div>  
+      </div>
+      <div class="face back"> 
+           <div class="col s12">
+               <div class="row">
+                <div class="input-field col s12">
+                  <input autocomplete="off" data-name="card[{{index}}].input" data-on="change->card" type="text" />
+                  <label data-name="card[{{index}}].input" data-view="validInfo">...?</label>
+                </div>
+              </div>
+           </div>
+      </div>
+  </div>
+</div>
